@@ -448,7 +448,7 @@ class User:
     @classmethod
     def id_to_username(cls, user_id: str, token: int=0) -> str:
         try:
-            headers = User.create_headers(bearer_token=eval('BEARER{number}'.format(number=token)))
+            headers = User.create_headers(bearer_token='AAAAAAAAAAAAAAAAAAAAALg1GwAAAAAA1C0uifnz2DzClAiv1Iq5DKRyvkA%3D3TbEBCQ7y3U2Flmkxtirl28Ar1jDxIrw0RULmDImEeIMgiaIg1')
             url = User.userid_url(userid=user_id)
             return User.connect_to_endpoint(url, headers)['data']['username']
         except Exception as e:
