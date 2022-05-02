@@ -11,6 +11,7 @@ from typing import *
 
 SEARCH = "https://api.twitter.com/2/tweets/search/all"
 SEARCH_RECENT = "https://api.twitter.com/2/tweets/search/recent"
+BEARER0key = 'AAAAAAAAAAAAAAAAAAAAAIb1ZAEAAAAAcIucm%2BOnB4oyc0fXmde%2BxcpAQz4%3DHKqaiRXkJmJiIEIt0wU8olMuHl5Vtc0vOEZPY7xhJEbphk7o33'
 
 
 class DB:
@@ -448,7 +449,7 @@ class User:
     @classmethod
     def id_to_username(cls, user_id: str, token: int=0) -> str:
         try:
-            headers = User.create_headers(bearer_token='AAAAAAAAAAAAAAAAAAAAAIb1ZAEAAAAAsj5E82qWUVZHf2yK7a6xTKgrUS4%3DNadQqtkZ6dOrxTTkUzPYXFLAzhdyuhrQvf8ooRcnXKTCXVzQKY')
+            headers = User.create_headers(bearer_token=BEARER0Key)
             url = User.userid_url(userid=user_id)
             return User.connect_to_endpoint(url, headers)['data']['username']
         except Exception as e:
