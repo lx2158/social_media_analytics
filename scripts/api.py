@@ -12,7 +12,7 @@ from typing import *
 SEARCH = "https://api.twitter.com/2/tweets/search/all"
 SEARCH_RECENT = "https://api.twitter.com/2/tweets/search/recent"
 BEARER0key = 'AAAAAAAAAAAAAAAAAAAAAIb1ZAEAAAAAcIucm%2BOnB4oyc0fXmde%2BxcpAQz4%3DHKqaiRXkJmJiIEIt0wU8olMuHl5Vtc0vOEZPY7xhJEbphk7o33'
-
+bearer_token = BEARER0key
 
 class DB:
 
